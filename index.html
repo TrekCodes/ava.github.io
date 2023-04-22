@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+      <audio id="my-audio" src="assets/cout.mp3" ></audio>
+    <div class="login_form_container">
+      <div class="login_form">
+        <center>  <img src='logo.png'> </center>
+        <div class="input_group">
+          <i class="fa fa-user"></i>
+          <input
+            type="text"
+            placeholder="Username"
+            id="username"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="input_group">
+          <i class="fa fa-unlock-alt"></i>
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="button_group" id="login_button" onclick="auth()">
+          <a>Submit</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function auth() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username == "Avanthika" && password == "Avanthi@3004") {
+          window.location.href = "start.html"; // Redirecting to other page.
+          return false;
+        } else {
+          alert("Invalid login credentials");
+          return false;
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+	<script>
+  var audio = document.getElementById("my-audio");
+  audio.autoplay = true;
+  audio.loop = true;
+  audio.play();
+  audio.addEventListener("click", function() {
+    audio.play();
+  });
+</script>
+  </body>
+</html>
