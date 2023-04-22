@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
-      <audio id="my-audio" src="assets/cout.mp3" ></audio>
     <div class="login_form_container">
       <div class="login_form">
         <center>  <img src='logo.png'> </center>
@@ -41,6 +40,7 @@
           <a>Submit</a>
         </div>
       </div>
+	  <audio loop id="autoplay"> <source src="assets/cout.mp3" type="audio/mp3"> </source> </audio>
     </div>
 
     <script>
@@ -59,13 +59,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="login.js"></script>
 	<script>
-  var audio = document.getElementById("my-audio");
-  audio.autoplay = true;
-  audio.loop = true;
-  audio.play();
-  audio.addEventListener("click", function() {
-    audio.play();
-  });
+  window.onload = function() {
+  var audio = document.getElementById("autoplay").play();
+  }
 </script>
+
   </body>
 </html>

@@ -235,8 +235,8 @@ footer {
    <title>Avanthika Birthday</title>
   </head>
 <body>
-
-       <audio id="my-audio" src="assets/hbd.mp3" ></audio>
+	   <audio loop id="autoplay"> <source src="assets/hbd.mp3" type="audio/mp3"> </source>
+</audio>
 
         <!-- <audio src="./assets/mp3/song.mp3" id="my_audio" loop="loop"></audio>  -->
   <div id="card">
@@ -322,5 +322,10 @@ On your birthday, my wish for you is that you continue to grow and prosper in al
   audio.addEventListener("click", function() {
     audio.play();
   });
+</script>
+<script>
+  window.onload = function() {
+  var audio = document.getElementById("autoplay").play();
+  }
 </script>
   </html>
